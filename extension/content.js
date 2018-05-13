@@ -31,6 +31,8 @@ for (var i = 1, l = npcName.length + 1; i < l; i++) {
 	var Statuses = ["Berserk Res", "Bind Res", "Blind Res", "Charm Res", "Daze Res", "Death Sentence Res", "Debuff Res", "Delay Res", "Paralyze Res", "Petrify Res", "Poison Res", "Rage Res", "Silence Res", "Sleep Res", "Slow Res", "Stop Res", "Stun Res"]
 		// Removed variables: "Infect Res", "Knockback Res", 
 	var countStatuses = Statuses.length
+	var origStatuses = Statuses;
+	
 	var Partial = []; // For partial statuses
 	var Resistant = []; // For the listed statuses of interest if resistant
 
@@ -51,7 +53,7 @@ for (var i = 1, l = npcName.length + 1; i < l; i++) {
 		for (var k = 0; k < statName.length; k++) {
 			var Val = Number(statVal[k].innerHTML)
 			var Var = statName[k].innerHTML
-			if (!Var) {
+			if (!Var || origStatuses.indexOf(Var)<0) {
 			  continue
 			}
 			Statuses = remove(Statuses, Var)
