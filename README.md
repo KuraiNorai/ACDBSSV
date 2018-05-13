@@ -6,7 +6,9 @@ This extension was made to parse the quest page of the Alchemist Code Database (
 
 Download, modify to your liking, and install :)
 
-The initial extension was made for the dark skin theme on ACDB.
+The initial extension was made for the dark skin theme on ACDB so be sure to change the 'white' font for 100% susceptbility to black if you use the white theme.
+
+Want a slim-down version for the statuses you care about? Edit the var Statuses to only include those entries of interest!
 
 # Default values
 ## Note (Status reference)
