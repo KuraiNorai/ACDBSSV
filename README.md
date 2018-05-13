@@ -51,6 +51,7 @@ If you made edits to the extension, you can import it through the following meth
 3. Click "Load Unpacked" below the search bar
 4. Select the extension folder.
 5. Enable and you are done :)
+6. (Recommended) Turn off Developer mode
 Click the refresh icon if you make any changes to the extension after loading to update the extension.
 
 ## Firefox
