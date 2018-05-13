@@ -27,7 +27,7 @@ By default (with the __ part of the variable name in the parenthesis):
 - High susceptibility (70-79%) = #66CC00 (a dark shade of green that is still brighter than just 'green')
 - Very high susceptibility (80-89%) = chartreuse (bright green)
 - Highest susceptibility (90-99%) = pale green (a shade closer to being white than the other greens)
-- Fully susceptibile (100%) = white
+- **Fully susceptibile (100%) = white** (SET TO BLACK IF YOU'RE USING THE WHITE THEME)
 - Susceptibile to all status OR fully susceptible important status = magenta
 
 ## Table element colouring
@@ -63,8 +63,13 @@ If you made edits to the extension, you can import it through the following meth
 Click the refresh icon if you make any changes to the extension after loading to update the extension.
 
 ## Firefox
+(for FireFox 64-bit version 59.0.3)
 
-I have not made a Firefox version but I am sure you can find out how to import the chrome version.
+1. Go to about:debugging
+2. Select 'Load Temporary Add-on'
+3. Select the folder
+
+Done :)
 
 # Questions
 If you have any questions, do not hesitate to contact me on Discord (KuraiNorai#8889) or on Reddit (/u/KuraiNorai) though I do not go on often on the latter.
