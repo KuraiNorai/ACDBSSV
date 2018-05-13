@@ -2,7 +2,8 @@
 View the status susceptibility of the quest units in the Alchemist Code Database
 
 # HOWTO: Import the extension to Chrome or Firefox
-If you made edits to the extension, you can import it through the following method:
+Download the extension folder and make the changes you want. (You can reload the extension, once loaded, through the extension page if you wish to make the changes later).
+  
 ## Chrome 
 (based on the 64-bit Version 66.0.3359.139 (Official Build))
 
