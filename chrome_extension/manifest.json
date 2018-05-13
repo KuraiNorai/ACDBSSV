@@ -1,0 +1,21 @@
+  {
+    "name": "ACDB Status Susceptibility Viewer (ACDBSSV)",
+    "version": "0.1",
+    "description": "View the status susceptibility of the quest units in the Alchemist Code Database. Values in the brackets are the success rate of the status if there is some resistance (100 - resistance value).",
+    "manifest_version": 2,
+	"author":"KuraiNorai#8889 (Discord); /u/KuraiNorai (Reddit)",
+
+	"browser_action": {
+	  "default_icon": "icon.png"
+	},
+	
+	"content_scripts": [
+	  {
+		"matches": [
+		  "http://www.alchemistcodedb.com/quest/*", "https://www.alchemistcodedb.com/quest/*"
+		],
+		"js": ["content.js"]
+	  }
+	]
+	
+  }
