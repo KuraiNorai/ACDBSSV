@@ -14,9 +14,7 @@ Want a slim-down version for the statuses you care about? Edit the var Statuses 
 ## Note (Status reference)
 The values of the skills are based on the resistance name from the units info (e.g. "Daze Res").
 
-At the end portion of the extension, the " Res" portion comes off but it is vital that these portions remain
-
-when making references to the skill within the extension.
+At the end portion of the extension, the " Res" portion comes off but it is vital that these portions remain when making references to the skill within the extension.
 
 ## Susceptibility Colouring
 The first set of variables encounted (_Cutoff and _Color) are the colouring of the skills resisted in ascending order (going from least to most susceptible).
