@@ -1,6 +1,29 @@
 # ACDB Status Susceptibility Viewer (ACDBSSV)
 View the status susceptibility of the quest units in the Alchemist Code Database
 
+# HOWTO: Import the extension to Chrome or Firefox
+If you made edits to the extension, you can import it through the following method:
+## Chrome 
+(based on the 64-bit Version 66.0.3359.139 (Official Build))
+
+1. Options (three dots) > More tools > Extensions (or go to chrome://extensions)
+2. Enable Developer mode (top right)
+3. Click "Load Unpacked" below the search bar
+4. Select the extension folder.
+5. Enable and you are done :)
+6. (Recommended) Turn off Developer mode
+Click the refresh icon if you make any changes to the extension after loading to update the extension.
+
+## Firefox
+(based on FireFox 64-bit version 59.0.3)
+
+1. Go to about:debugging
+2. Select 'Load Temporary Add-on'
+3. Select the folder
+
+Done :)
+
+
 # Purpose
 This extension was made to parse the quest page of the Alchemist Code Database (ACDB, http://www.alchemistcodedb.com/quest/*).
 
@@ -48,28 +71,6 @@ If the enemy is fully resistant, unlike the other resistant statuses, it will ap
 
 # Example (truncated Veda Floor 41)
 ![Example image ](Example_Veda41.png)
-
-# Import unofficial version
-If you made edits to the extension, you can import it through the following method:
-## Chrome 
-(for the 64-bit Version 66.0.3359.139 (Official Build))
-
-1. Options (three dots) > More tools > Extensions (or go to chrome://extensions)
-2. Enable Developer mode (top right)
-3. Click "Load Unpacked" below the search bar
-4. Select the extension folder.
-5. Enable and you are done :)
-6. (Recommended) Turn off Developer mode
-Click the refresh icon if you make any changes to the extension after loading to update the extension.
-
-## Firefox
-(for FireFox 64-bit version 59.0.3)
-
-1. Go to about:debugging
-2. Select 'Load Temporary Add-on'
-3. Select the folder
-
-Done :)
 
 # Questions
 If you have any questions, do not hesitate to contact me on Discord (KuraiNorai#8889) or on Reddit (/u/KuraiNorai) though I do not go on often on the latter.
