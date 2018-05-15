@@ -2,6 +2,8 @@
 JavaScript for the Alchemist Code Quest page to load status effects
 KuraiNorai#8889  2018/05/12
 
+Extension available at https://github.com/KuraiNorai/ACDBSSV
+
 Note: Most of the status used here initially is the header label of the resistance of the status from the quest units.
 At the end, the " Res" part of the names are dropped off.
 */

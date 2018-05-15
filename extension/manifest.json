@@ -1,7 +1,8 @@
+// Extension available at https://github.com/KuraiNorai/ACDBSSV
   {
     "name": "ACDB Status Susceptibility Viewer (ACDBSSV)",
     "version": "0.1.3",
-    "description": "View the status susceptibility of the quest units in the Alchemist Code Database. Values in the brackets are the success rate of the status if there is some resistance (100 - resistance value).",
+    "description": "View the status susceptibility of the quest units in the Alchemist Code Database. Extension available on github @ KuraiNorai/ACDBSSV",
     "manifest_version": 3,
 	"author":"KuraiNorai#8889 (Discord); /u/KuraiNorai (Reddit)",
 
