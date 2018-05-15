@@ -8,6 +8,9 @@ Note: Most of the status used here initially is the header label of the resistan
 At the end, the " Res" part of the names are dropped off.
 */
 
+// The statuses you want to appear. Note that these are named after the resistances on the enemy profile!
+var origStatuses = ["Berserk Res", "Bind Res", "Blind Res", "Charm Res", "Daze Res", "Death Sentence Res", "Debuff Res", "Delay Res", "Paralyze Res", "Petrify Res", "Poison Res", "Rage Res", "Silence Res", "Sleep Res", "Slow Res", "Stop Res", "Stun Res"]
+	               // Removed variables: "Infect Res", "Knockback Res", 
 var importantStatuses = ["Stop Res", "Petrify Res", "Daze Res"];  // Bolds/underline these in the same tone as allColor
 var showResistant = 1;  // Lists the resistant status effects of the specified element (or = 2 for all)
 var Separator = " | "; // Default was <br/>
@@ -33,10 +36,8 @@ function remove(array, element) {
 
 var npcName = document.getElementsByClassName('npc-name');
 for (var i = 1, l = npcName.length + 1; i < l; i++) {
-	var Statuses = ["Berserk Res", "Bind Res", "Blind Res", "Charm Res", "Daze Res", "Death Sentence Res", "Debuff Res", "Delay Res", "Paralyze Res", "Petrify Res", "Poison Res", "Rage Res", "Silence Res", "Sleep Res", "Slow Res", "Stop Res", "Stun Res"]
-		// Removed variables: "Infect Res", "Knockback Res", 
+	var Statuses = origStatuses 
 	var countStatuses = Statuses.length
-	var origStatuses = Statuses;
 	
 	var Partial = []; // For partial statuses
 	var Resistant = []; // For the listed statuses of interest if resistant
