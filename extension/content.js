@@ -9,6 +9,9 @@ At the end, the " Res" part of the names are dropped off.
 var importantStatuses = ["Stop Res", "Petrify Res", "Daze Res"];  // Bolds/underline these in the same tone as allColor
 var showResistant = 1;  // Lists the resistant status effects of the specified element (or = 2 for all)
 var Separator = " | "; // Default was <br/>
+var successRate=100;   // Assume that the success rate of the statuses is 100 by default and subtract the enemy's resistance from this value.
+var groupImpStat=1;   // If set to 1, the important statuses will be grouped together in the appropriate listing section (e.g. if partially resisted, it will be the first item listed after the susceptible statuses)
+                      // If set to zero, it will be ordered by susceptibility and then alphabetically
 
 // Setting up the colours & cutoff for the partial resistances. Going for <=Cutoff = colour
 var noColor='gray';       //  If the important status is fully resisted
@@ -51,18 +54,20 @@ for (var i = 1, l = npcName.length + 1; i < l; i++) {
 		var statVal = statTable[j+1].getElementsByTagName("td")
 
 		for (var k = 0; k < statName.length; k++) {
-			var Val = Number(statVal[k].innerHTML)
-			var Var = statName[k].innerHTML
-			if (!Var || origStatuses.indexOf(Var)<0) {
+			var Val = Number(statVal[k].innerHTML)  //  The enemy resistance value
+			var Var = statName[k].innerHTML         //  The name of the resistance stat (e.g. Delay Res)
+			if (!Var || origStatuses.indexOf(Var)<0) { //  If the variable is not defined in var Statuses, ignore it
 			  continue
 			}
-			Statuses = remove(Statuses, Var)
-			if(Val >= 100){
+			Statuses = remove(Statuses, Var)  //  Remove it from our initial status list (this is used to see if all statuses is resistant, after the for loop.
+			Sus=(successRate - Val)  //  The assumed success rate subtracted by the enemy resis 
+			if(Val >= successRate){
+				// Resistant status - If the enemy resistance is at least the same value as the success rate
 				statName[k].style.backgroundColor = "darkred";
-				if(showResistant == 2 || (showResistant && (importantStatuses.indexOf(Var)>=0))){Resistant.push('<font color="' + noColor + '" style="font-weight: bold; text-decoration: underline;" >' + Var + ' (0)</font>')}
-			} else { //if (Val < 100) {
-			  Sus=(100 - Val)
-			  Partial.push('<font color="' + (Sus<=verylowCutoff ? verylowColor : Sus<=lowCutoff ? lowColor  : Sus<=midCutoff ? midColor : Sus<=highCutoff ? highColor : Sus<=veryhighCutoff ? veryhighColor : highestColor) + '"  style="font-weight: ' + ((importantStatuses.indexOf(Var)>=0)?"bold":"normal") + '; text-decoration: ' + ((importantStatuses.indexOf(Var)>=0)?"underline":"initial") + ';" >' + Var + " (" + Sus + ")</font>")
+				if(showResistant == 2 || (showResistant && (importantStatuses.indexOf(Var)>=0))){Resistant.push('<font class="' + Var + '" color="' + noColor + '" style="font-weight: bold; text-decoration: underline;" >' + Var + ' ('+ Sus + ')</font>')}
+			} else { //if (Sus >= 50) {  // If this else-if is enabled, susceptible value >= 50 will be included and those < 50 will be ignored
+			  // Partial status
+			  Partial.push('<font class="' + ((groupImpStat && importantStatuses.indexOf(Var)>=0)?"-1":"") + Val.toString() + Var + '" color="' + (Sus<=verylowCutoff ? verylowColor : Sus<=lowCutoff ? lowColor  : Sus<=midCutoff ? midColor : Sus<=highCutoff ? highColor : Sus<=veryhighCutoff ? veryhighColor : highestColor) + '"  style="font-weight: ' + ((importantStatuses.indexOf(Var)>=0)?"bold":"normal") + '; text-decoration: ' + ((importantStatuses.indexOf(Var)>=0)?"underline":"initial") + ';" >' + Var + " (" + Sus + ")</font>")
 			  statName[k].style.backgroundColor = "forestgreen";
 			}
 		}
@@ -70,7 +75,7 @@ for (var i = 1, l = npcName.length + 1; i < l; i++) {
 
 	// Output the resulting sensitive set -  String version: 
 	if(Statuses.length == countStatuses){
-		newCell.innerHTML = '<font color="' + allColor + '">All</font>'
+		newCell.innerHTML = '<font class="' + Var + '" color="' + allColor + '">All</font>'
 	} else {
 		// Sort the statuses
 		Statuses.sort()
@@ -79,15 +84,14 @@ for (var i = 1, l = npcName.length + 1; i < l; i++) {
 
 		if(showResistant && importantStatuses.length>0){
 			for(succTerm in Statuses){
-			
-				if(importantStatuses.indexOf(Statuses[succTerm])>=0){Statuses[succTerm] = '<font style="font-weight: bold; text-decoration: underline;" color="' + allColor + '">' + Statuses[succTerm] + '</font>'}
-				else {Statuses[succTerm] = '<font color="' + perfectColor + '">' + Statuses[succTerm] + '</font>'}
+				if(importantStatuses.indexOf(Statuses[succTerm])>=0){Statuses[succTerm] = '<font class="' + (groupImpStat?"0":"") + Var + '" style="font-weight: bold; text-decoration: underline;" color="' + allColor + '">' + Statuses[succTerm] + '</font>'}
+				else {Statuses[succTerm] = '<font class="' + Var + '" color="' + perfectColor + '">' + Statuses[succTerm] + '</font>'}
 			}
 
 			newCell.innerHTML = Statuses.toString().replace(/\sRes/g, "").replace(/,/g, Separator);
 
 		} else {
-			newCell.innerHTML = '<font color="' + perfectColor + '">' + Statuses.toString().replace(/\sRes/g, "").replace(/,/g, Separator) + '</font>';
+			newCell.innerHTML = '<font class="' + "0" + Var + '" color="' + perfectColor + '">' + Statuses.toString().replace(/\sRes/g, "").replace(/,/g, Separator) + '</font>';
 		}
 		
 		if(Partial.length > 0){ newCell.innerHTML = newCell.innerHTML + Separator + Partial.toString().replace(/\sRes/g, "").replace(/,/g, Separator)};
