@@ -1,5 +1,5 @@
 # Updates
-## Version 0.1.3 (2018/05/15 at 16:05 UTC)
+## Version 0.1.3 (2018/05/15 at 16:04 UTC)
 Minor updates:
 - Showed the susceptible value for resisted important statuses (instead of just saying (0)).
 - Easier to adjust the assumed success rate (default: 100)
