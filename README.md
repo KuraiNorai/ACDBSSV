@@ -1,5 +1,6 @@
 # ACDB Status Susceptibility Viewer (ACDBSSV)
 View the status susceptibility of the quest units in the Alchemist Code Database.
+
 **Current version: 0.1.3 (2018/05/15 at 16:04 UTC)**
 
 # HOWTO: Import the extension to Chrome or Firefox
