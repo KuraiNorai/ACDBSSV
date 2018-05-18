@@ -22,7 +22,7 @@ Click the refresh icon if you make any changes to the extension after loading to
 
 1. Go to about:debugging
 2. Select 'Load Temporary Add-on'
-3. Select the folder
+3. Select any file within the extension folder 
 
 Done :)
 
