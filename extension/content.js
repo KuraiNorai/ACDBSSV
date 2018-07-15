@@ -89,6 +89,8 @@ for (var i = 1 ; i < l; i++) {
 				Statuses = remove(Statuses, Var)  //  Remove it from our initial status list (this is used to see if all statuses is resistant, after the for loop.
 				Sus=(successRate - Val)  //  The assumed success rate subtracted by the enemy resis 
 				
+				statName[k].innerHTML = Var + "<br/>" + statName[k].innerHTML  //  Show the label of the statuses when the unit info is expanded (rather needing to hover the icons)
+				
 				binomialColor=1   //  Set to 1 if you want to see either a green or red shade. Leaving it as 0 reflects the colour as defined at the top.
 				if(Val >= successRate){
 					// Resistant status - If the enemy resistance is at least the same value as the success rate
