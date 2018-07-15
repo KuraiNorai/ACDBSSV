@@ -1,4 +1,13 @@
 # Updates
+## Version 0.1.4 (2018/07/15 at 06:07 UTC)
+Updates:
+- Now works with the latest changes in ACDB
+  -- Notably the parser looks for the the text label in the attributes rather than the innerHTML (which was changed to the icon-label)
+  -- Removed the 'Debuff Res' choice 
+- Made a toggle for the susceptibility list (click the "Susceptibility status" link to toggle their appearance)
+- Added more options to showResistant (see the // comments in the script for more details)
+- Added an option to reflect the icon's background table colour to the gradient style defined rather than the default green/red option (if you want to, personally I think that the green/red looks good. To change the olour, modify binomialColor in the midst of the code) 
+
 ## Version 0.1.3 (2018/05/15 at 19:43 UTC)
 Minor updates:
 - Showed the susceptible value for resisted important statuses (instead of just saying (0)).
