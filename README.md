@@ -1,7 +1,7 @@
 # ACDB Status Susceptibility Viewer (ACDBSSV)
 View the status susceptibility of the quest units in the Alchemist Code Database.
 
-**Current version: 0.1.3 (2018/05/15 at 16:04 UTC)**
+**Current version: 0.1.4 (2018/07/15 at 06:07 UTC)**
 
 # HOWTO: Import the extension to Chrome or Firefox
 Download the extension folder and make the changes you want. (You can reload the extension, once loaded, through the extension page if you wish to make the changes later).
@@ -73,7 +73,14 @@ If the enemy has no resistance, it will have the same colour as the defined "all
 If the enemy is fully resistant, unlike the other resistant statuses, it will appear at the end of the list with 0 appended.
 
 # Example (truncated Veda Floor 41)
-![Example image ](Example_Veda41.png)
+## with showResistant = 1 (Lists the resistant status effects of the entries listed in the importantStatuses) 
+![Example image +1 ](Example_Veda41_v0.1.4_showResis+1.png)
+
+## with showResistant = -1 (Only show important status (even if resisted) & guaranteed status afflication) 
+![Example image -1 ](Example_Veda41_v0.1.4_showResis-1.png)
+
+## with showResistant = -2 (Only show important status (not resisted) & guaranteed status afflication) 
+![Example image -2 ](Example_Veda41_v0.1.4_showResis-2.png)
 
 # Questions
 If you have any questions, do not hesitate to contact me on Discord (KuraiNorai#8889) or on Reddit (/u/KuraiNorai) though I do not go on often on the latter.
