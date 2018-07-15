@@ -73,13 +73,13 @@ If the enemy has no resistance, it will have the same colour as the defined "all
 If the enemy is fully resistant, unlike the other resistant statuses, it will appear at the end of the list with 0 appended.
 
 # Example (truncated Veda Floor 41)
-## with showResistant = 1 (Lists the resistant status effects of the entries listed in the importantStatuses) 
+### with showResistant = 1 (Lists the resistant status effects of the entries listed in the importantStatuses) 
 ![Example image +1 ](Example_Veda41_v0.1.4_showResis+1.png)
 
-## with showResistant = -1 (Only show important status (even if resisted) & guaranteed status afflication) 
+### with showResistant = -1 (Only show important status (even if resisted) & guaranteed status afflication) 
 ![Example image -1 ](Example_Veda41_v0.1.4_showResis-1.png)
 
-## with showResistant = -2 (Only show important status (not resisted) & guaranteed status afflication) 
+### with showResistant = -2 (Only show important status (not resisted) & guaranteed status afflication) 
 ![Example image -2 ](Example_Veda41_v0.1.4_showResis-2.png)
 
 # Questions
