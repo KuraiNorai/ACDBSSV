@@ -7,7 +7,7 @@ Updates:
 - Made a toggle for the susceptibility list (click the "Susceptibility status" link to toggle their appearance)
   - Very handy when you want to look at the entries for the enemies :)
 - Added more options to showResistant (see the // comments in the script for more details)
-  - Ain't b=nobody have time to list it all out here (even though it would just be a copy & paste...)
+  - Ain't nobody have time to list it all out here (even though it would just be a copy & paste...)
 - Added an option to reflect the icon's background table colour to the gradient style defined rather than the default green/red option (if you want to, personally I think that the green/red looks good. To change the olour, modify binomialColor in the midst of the code) 
 
 ## Version 0.1.3 (2018/05/15 at 19:43 UTC)
