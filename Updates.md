@@ -1,4 +1,7 @@
 # Updates
+## Version 0.1.4.1 (2018/07/15 at 17:22 UTC)
+Minor update: Now lists the label of the status above the status icons that you observe when expanding the unit information (rather than needing to hover over the icon to see what status that the icon represents)
+
 ## Version 0.1.4 (2018/07/15 at 06:07 UTC)
 Updates:
 - Now works with the latest changes in ACDB
